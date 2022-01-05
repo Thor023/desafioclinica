@@ -81,7 +81,7 @@ Consultorio.prototype.getPaciente = function(){
     return this._getPaciente;
 };
 Consultorio.prototype.setPaciente = function(paciente){
-    this._setPaciente = paciente;
+    this._setPaciente = paciente.push(paciente);
 };
 //Prototype Pacientes
 Paciente.prototype.getNombre = function(){
@@ -117,11 +117,13 @@ c1 = new Consultorio('San Juan', [p1],[p3]);
 c2 = new Consultorio ('Felix de Amesti', [p2] );
 
 
-//Mostras pacientes
+//Mostrar pacientes
 Consultorio.prototype.pacientesregistrados = function (){
     var lista = this.getPaciente();
     lista.forEach(function (item){
-        console.log("Paciente:" + item.getNombre()+"|Edad:"+item.getEdad()+"|Rut: "+item.getRut()+"|Diagnostico:"+item.getDiagnostico+".");
+        console.log("Paciente:" + item.getNombre()+"|Edad:"+item.getEdad()+"|Rut: "+item.getRut()+"|Diagnostico:"+item.getDiagnostico()+".");
     });
 }
 c1.pacientesregistrados();
+c2.pacientesregistrados();
+//No muestra todos los pacientes de C1 y como hacer para buscar.
