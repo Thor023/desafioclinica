@@ -126,4 +126,4 @@ Consultorio.prototype.pacientesregistrados = function (){
 }
 c1.pacientesregistrados();
 c2.pacientesregistrados();
-//No muestra todos los pacientes de C1 y como hacer para buscar.
+//No muestra todos los pacientes de C1 y como hacer para buscar. y C2 me muestra p2 en vez de p3 como debiese.
