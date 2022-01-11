@@ -109,19 +109,19 @@ Paciente.prototype.setDiagnostico = function(diagnostico){
     this._setDiagnostico = diagnostico;
 };
 //Instancias Pacientes
-p1 = new Paciente('Juan', '38', '12334554-k', 'asma');
-p2 = new Paciente('Pedro', '23', '12345554-6', 'Resfrio');
-p3 = new Paciente('Diego', '24', '12377854-1', 'Lumbago');
+const p1 = new Paciente('Juan', '38', '12334554-k', 'asma');
+const p2 = new Paciente('Pedro', '23', '12345554-6', 'Resfrio');
+const p3 = new Paciente('Diego', '24', '12377854-1', 'Lumbago');
 //Instancias Consultorio
-c1 = new Consultorio('San Juan', [p1],[p3]);
-c2 = new Consultorio ('Felix de Amesti', [p2] );
+const c1 = new Consultorio('San Juan', [p1,p3]);
+const c2 = new Consultorio ('Felix de Amesti', [p2] );
 
 
 //Mostrar pacientes
 Consultorio.prototype.pacientesregistrados = function (){
-    var lista = this.getPaciente();
-    lista.forEach(function (item){
-        console.log("Paciente:" + item.getNombre()+"|Edad:"+item.getEdad()+"|Rut: "+item.getRut()+"|Diagnostico:"+item.getDiagnostico()+".");
+    let lista = this.getPaciente();
+    lista.find(function (item){
+        console.log("Paciente:" + item.getNombre()+"|Edad:"+item.getEdad()+"|Rut: "+item.getRut()+"|Diagnostico:"+item.getDiagnostico());
     });
 }
 c1.pacientesregistrados();
